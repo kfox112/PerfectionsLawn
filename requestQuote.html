@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Perfections Lawn & Property Maintenance</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="At Perfection's Lawn and Property Maintenance, we pride ourselves on providing quality service that customers can believe in. Whether it's lawn care, maintenance at your property or general maintenance service, we can take care of all of your property maintenance needs. Ask us about our weekly service! We look forward to working with you!" />
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/590f3b1d4c.js" crossorigin="anonymous"></script>
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/requestQuote.css" />
+
+	<!-- Process Includes -->
+	<script>
+		$(function () {
+			$("#header").load("includes/header.html");
+			$("#footer").load("includes/footer.html");
+		});
+	</script>
+</head>
+
+<body>
+	<div id='headerWrap'>
+		<div id='header'></div>
+	</div>
+
+	<div id='navWrap'>
+		<nav>
+			<a class='selected' href='index.html'>Home</a>
+			<a href='#' style='visibility: hidden'>Contact</a>
+		</nav>
+	</div>
+
+	<div id='content'>
+		<div class='main-card'>
+			<h2>Request a Quote</h2>
+			<form action='https://4kgr5epqaqzqf4rdv33jticqua0pzjad.lambda-url.us-east-1.on.aws/' method='post' class='main-card-content'>
+				<div class='field'>
+					<label for='firstName'>First Name </label>
+					<input id='firstName' name='firstName' type='text' />
+				</div>
+				<div class='field'>
+					<label for='lastName'>Last Name </label>
+					<input id='lastName' name='lastName' type='text' />
+				</div>
+				<div class='field'>
+					<label for='phoneNumber'>Phone Number </label>
+					<input id='phoneNumber' name='phoneNumber' type='tel' />
+				</div>
+
+				<div>
+					<label>Contact Method</label>
+					<label><input name='contactMethod' type='radio' value='phoneCall'>Phone Call</label>
+					<label><input name='contactMethod' type='radio' value='textMessage'>Text Message</label>
+					<label><input name='contactMethod' type='radio' value='email'>Email</label>
+				</div>
+
+				<div class='field'>
+					<label for='description'>Description</label>
+					<textarea id='description' name='description'></textarea>
+				</div>
+
+				<input type='submit' value='Submit' />
+			</form>
+		</div>
+	</div>
+
+	<div id='footerWrap'>
+		<div id='footer'></div>
+	</div>
+</body>
+
+</html>
+
+<!--
+	<div>
+		<div class="addr1"><i class="fa-solid fa-location-dot"></i> 423 Gelsinger Rd</div>
+		<div class="addr2">Sinking Spring, PA 19608</div>
+	</div>
+-->

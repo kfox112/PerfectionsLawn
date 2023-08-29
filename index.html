@@ -2,63 +2,125 @@
 <html>
 	<head>
 		<title>Perfections Lawn & Property Maintenance</title>
-  		<meta name="viewport" content="width=device-width,initial-scale=1"> 
-		<link rel="stylesheet" href="./style.css" />
+
+  		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta name="description" content="At Perfection's Lawn and Property Maintenance, we pride ourselves on providing quality service that customers can believe in. Whether it's lawn care, maintenance at your property or general maintenance service, we can take care of all of your property maintenance needs. Ask us about our weekly service! We look forward to working with you!" />  
+		<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet"> 
 		<script src="https://kit.fontawesome.com/590f3b1d4c.js" crossorigin="anonymous"></script>
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- Process Includes -->
+		<script>
+			$(function(){
+				$("#header").load("includes/header.html"); 
+				$("#footer").load("includes/footer.html"); 
+			});
+		</script>
 	</head>
 	<body>
-		<header>
-			<img id='logo' src='logo.svg' alt="Perfection's Lawn & Property Maintenance" />
-			<h1>Perfection's Lawn & Property Maintenance </h1>
-			<div id='highlight'>
-				<div><i class="fa-solid fa-check"></i> Residential</div>
-				<div><i class="fa-solid fa-check"></i> Commercial</div>
-				<div><i class="fa-solid fa-check"></i> Fully Insured</div>
-			</div>
-		</header>
+		<div id='headerWrap'>
+			<div id='header'></div>
+		</div>
 
-		<div id='hero'></div>
-		<ul id='services'>
-			<li>Mowing</li>
-			<li>Edging</li>
-			<li>Mulching</li>
-			<li>Planting</li>
-			<li>Landscaping</li>
-			<li>Weed Control</li>
-			<li>Seasonal Clean-Ups</li>
-			<li>Shrub Trimming</li>
-			<li>Hardscaping</li>
-			<li>Seeding &amp; Aerating</li>
-			<li>Tree Removal</li>
-			<li>Pruning</li>
-			<li>Debris &amp; Snow Removal</li>
-		</ul>
+		<div id='navWrap'>
+			<nav>
+				<button class='requestQuote' type='button' onClick='document.location.href="requestQuote.html"' style='visibility: hidden'>Request a Quote</button>
+				<a class='selected' href='#'>Home</a>
+				<a href='#' style='visibility: hidden'>Contact</a>
+			</nav>
+		</div>
 
 		<div id='content'>
-			<div id='contact'>
-				<h2>Contact</h2>
-				<div><i class="fa-solid fa-mobile-screen-button"></i><a href='tel:4843323249'>484-332-3249</a></div>
-				<div><i class="fa-solid fa-at"></i><a href='mailto:perfectionslawnandproperty@gmail.com'>perfectionslawnandproperty@gmail.com</a></div>
+			<div class='service-card'>
+				<h2>Lawn Care</h2>
+				<img src='./img/lawn-care.jpg'>
+				<ul>
+					<li>Weekly Mowing</li>
+					<li>Seeding</li>
+					<li>Aerating</li>
+					<li>Edging</li>
+					<li>Weed Control</li>
+				</ul>
+			</div>
+		
+			<div class='service-card'>
+				<h2>Landscaping</h2>
+				<img src='./img/landscaping.jpg'>
+				<ul>
+					<li>Mulching</li>
+					<li>Planting</li>
+					<li>Shrub Trimming</li>
+					<li>Hardscaping</li>
+					<li>Pruning</li>
+				</ul>
 			</div>
 
+			<div class='service-card'>
+				<h2>Tree Management</h2>
+				<img src='./img/tree-maintenance.jpg'>
+				<ul>
+					<li>Removal</li>
+					<li>Pruning</li>
+					<li>Trimming</li>
+				</ul>
+			</div>
 
-			<div id='about'>
-				<h2>About</h2>
-				At Perfection's Lawn and Property Maintenance, we pride ourselves on providing quality service that customers can believe in. Whether it's lawn care, maintenance at your property or general maintenance service, we can take care of all of your property maintenance needs. Ask us about our weekly service! We look forward to working with you!
+			<div class='service-card'>
+				<h2>Home Services</h2>
+				<img src='./img/home-services.jpg'>
+				<ul>
+					<li>Pressure Washing</li>
+					<li>Skid Loader Service</li>
+					<li>Interior & Exterior Improvement</li>
+					<li>Gutter Cleaning</li>
+					<li>Equipment Rental</li>
+				</ul>
+			</div>
+
+			<div class='service-card'>
+				<h2>Debris Removal</h2>
+				<img src='./img/debris-removal.jpg'>
+				<ul>
+					<li>Construction Debris</li>
+					<li>Yard Waste</li>
+					<li>Interior Clutter</li>
+					<li>Cleanouts</li>
+					<li>Small Demolition</li>
+					<li>Appliances</li>
+				</ul>
+			</div>
+
+			<div class='service-card'>
+				<h2>Winter Services</h2>
+				<img src='./img/winter-services.jpg'>
+				<ul>
+					<li>Snow Removal</li>
+					<li>Plowing</li>
+					<li>Salting</li>
+				</ul>
 			</div>
 		</div>
 
-		<footer>
-			<div class="content">
-				<div>
-					<div class="addr1"><i class="fa-solid fa-location-dot"></i> 423 Gelsinger Rd</div>
-					<div class="addr2">Sinking Spring, PA 19608</div>
-				</div>
-				<div><i class="fa-solid fa-mobile-screen-button"></i> <a href='tel:4843323249'>484-332-3249</a></div>
-			</div>
-		</footer>
+		<div id='footerWrap'>
+			<div id='footer'></div>
+		</div>
 	</body>
 </html>
+
+<!--
+	<div>
+		<div class="addr1"><i class="fa-solid fa-location-dot"></i> 423 Gelsinger Rd</div>
+		<div class="addr2">Sinking Spring, PA 19608</div>
+	</div>
+-->

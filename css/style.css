@@ -1,0 +1,260 @@
+/* Variables */
+:root {
+	/* Brand Colors */
+	--clr-primary: #0DB4EB;
+	--clr-primary-lt: #97E5FF;
+	--clr-secondary: #660F5D;
+	--clr-secondary-lt: #97158A;
+
+	/* Neutral Colors */
+	--clr-black: #000;
+	--clr-white: #FFF;
+	--clr-gray-300: #333;
+	--clr-gray-400: #444;
+	--clr-gray-700: #777;
+	--clr-gray-D: #DDD;
+
+	/* Layout Common */
+	--width-layout-max: 120rem;
+}
+
+html {
+	/* Set REM as 10px */
+	font-size: 62.5%;
+}
+
+body {
+	background: var(--clr-gray-700) url('../img/wood-texture.jpg') no-repeat fixed;
+	background-size: cover;
+	color: var(--clr-white);
+	font: 1.6rem 'Source Sans Pro', sans-serif;
+	margin: 0;
+	min-width: 37.5rem;
+	padding: 0 0 8rem 0;
+}
+
+h1 {
+	display: none;
+}
+
+a {
+	color: var(--clr-white);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--clr-primary-lt);
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+}
+
+#headerWrap {
+	background: var(--clr-gray-300);
+	padding: 2rem;
+	margin: 0;
+}
+
+.logo {
+	width: 25rem;
+}
+
+#contact {
+	font-size: 1.4rem;
+}
+
+#contact i {
+	color: var(--clr-primary);
+	display: inline-block;
+	line-height: 2.6rem;
+	margin-right: 1rem;
+	width: 1rem;
+}
+
+#navWrap {
+	background: #636363BB;
+	padding: 1.5rem 2rem;
+}
+
+nav {
+	margin: 0 auto;
+	max-width: var(--width-layout-max);
+}
+
+nav>a {
+	font-size: 1.8rem;
+	margin-right: 2rem;
+}
+
+nav>a.selected {
+	border-bottom: 2px solid var(--clr-primary);
+}
+
+button, input[type=submit] {
+	background: linear-gradient(var(--clr-secondary-lt), var(--clr-secondary));
+	border: none;
+	border-radius: 4px;
+	color: var(--clr-white);
+	cursor: pointer;
+	padding: 1rem;
+}
+
+button.requestQuote {
+	float: right;
+	padding: 1rem;
+	margin-top: -0.7rem;
+}
+
+#content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	grid-auto-rows: minmax(100px, auto);
+	max-width: var(--width-layout-max);
+	margin: 2rem;
+}
+
+.service-card, .main-card {
+	background: var(--clr-gray-300);
+	border-radius: 5px;
+}
+
+.service-card>h2, .main-card>h2 {
+	font-size: 2rem;
+	padding: 0 2rem;
+	padding-left: 5rem;
+	position: relative;
+}
+
+.service-card>h2::before,
+.main-card>h2::before {
+	content: "\f054";
+	color: var(--clr-primary);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 2rem;
+}
+
+.service-card>h2::after,
+.main-card>h2::after {
+	content: "\f054";
+	color: var(--clr-primary-lt);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 2.75rem;
+}
+
+.service-card>img {
+	height: 18rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.main-card-content {
+	padding: 2rem;
+}
+
+.service-card>ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-between;
+	margin: 0;
+	padding: 2rem;
+}
+
+.service-card>ul>li {
+	display: inline-block;
+	width: calc(50% - 1rem);
+	margin: 0;
+	padding: .5rem;
+}
+
+.service-card>ul>li::before {
+	content: '\2022  '
+}
+
+.service-card>ul>li:nth-child(even) {
+	text-align: right;
+}
+
+#footerWrap {
+	background: var(--clr-gray-300);
+	bottom: 0;
+	padding: .5rem 0;
+	position: fixed;
+	width: 100%;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	max-width: var(--width-layout-max);
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+footer i.fa-check {
+	color: var(--clr-primary);
+}
+
+footer i.fa-certificate {
+	color: #FAE957;
+}
+
+/***************************************************************************/
+/* =TABLET (720px+)                                                        */
+/***************************************************************************/
+@media all and (min-width: 45rem) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: var(--width-layout-max);
+	}
+
+	#logo {
+		float: left;
+		margin-bottom: 0;
+		max-width: 40rem;
+		width: 50%;
+	}
+
+	#content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#contact {
+		font-size: 1.6rem;
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	#about {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	div.addr1::after {
+		content: ',';
+	}
+
+	div.addr1,
+	div.addr2 {
+		display: inline-block;
+	}
+}
+
+/***************************************************************************/
+/* =DESKTOP (1200px+)                                                      */
+/***************************************************************************/
+@media all and (min-width: 75rem) {
+	#content {
+		grid-template-columns: 1fr 1fr 1fr;
+		margin: 2rem auto;
+	}
+}

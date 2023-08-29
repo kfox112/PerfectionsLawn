@@ -1,0 +1,21 @@
+div.field {
+    margin: 2rem 0;
+}
+div.field:first-child {
+    margin-top: 0;
+}
+label {
+    color: var(--clr-gray-D);
+    display: block;
+    font-size: 1.4rem;
+}
+input[type=text], input[type=tel], textarea {
+    background: var(--clr-gray-400);
+    border: none;
+    border-radius: 4px;
+    color: var(--clr-white);
+    padding: 1rem;
+}
+textarea {
+    min-width: 50rem;
+}
