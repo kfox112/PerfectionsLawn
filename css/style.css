@@ -5,6 +5,7 @@
 	--clr-primary-lt: #97E5FF;
 	--clr-secondary: #660F5D;
 	--clr-secondary-lt: #97158A;
+	--clr-error: #FF9999;
 
 	/* Neutral Colors */
 	--clr-black: #000;
@@ -92,7 +93,7 @@ nav>a.selected {
 	border-bottom: 2px solid var(--clr-primary);
 }
 
-button, input[type=submit] {
+button, input[type=submit], input[type=button] {
 	background: linear-gradient(var(--clr-secondary-lt), var(--clr-secondary));
 	border: none;
 	border-radius: 4px;
@@ -108,10 +109,6 @@ button.requestQuote {
 }
 
 #content {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 2rem;
-	grid-auto-rows: minmax(100px, auto);
 	max-width: var(--width-layout-max);
 	margin: 2rem;
 }
@@ -121,15 +118,27 @@ button.requestQuote {
 	border-radius: 5px;
 }
 
-.service-card>h2, .main-card>h2 {
+.service-card h2, .main-card h2 {
 	font-size: 2rem;
-	padding: 0 2rem;
-	padding-left: 5rem;
 	position: relative;
 }
+.main-card h2 {
+	padding: 0 2rem 0 3rem;
+}
+.service-card h2 {
+	padding: 0 2rem 0 5rem;
+}
 
-.service-card>h2::before,
-.main-card>h2::before {
+.main-card h2::before {
+	content: "\f054";
+	color: var(--clr-primary);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 0;
+}
+
+.service-card h2::before {
 	content: "\f054";
 	color: var(--clr-primary);
 	font-family: "Font Awesome 5 Free";
@@ -138,8 +147,16 @@ button.requestQuote {
 	left: 2rem;
 }
 
-.service-card>h2::after,
-.main-card>h2::after {
+.main-card h2::after {
+	content: "\f054";
+	color: var(--clr-primary-lt);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 0.75rem;
+}
+
+.service-card h2::after {
 	content: "\f054";
 	color: var(--clr-primary-lt);
 	font-family: "Font Awesome 5 Free";
@@ -206,6 +223,24 @@ footer i.fa-certificate {
 	color: #FAE957;
 }
 
+#errors > div {
+	border: 1px solid var(--clr-error);
+	border-radius: 3px;
+	padding: 1rem;
+	margin: 2rem 0;
+	color: var(--clr-error);
+}
+
+#errors > div::before {
+	content: "\f06A";
+	color: var(--clr-error);
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin: 0 1rem;
+}
+
+
 /***************************************************************************/
 /* =TABLET (720px+)                                                        */
 /***************************************************************************/
@@ -222,10 +257,6 @@ footer i.fa-certificate {
 		margin-bottom: 0;
 		max-width: 40rem;
 		width: 50%;
-	}
-
-	#content {
-		grid-template-columns: 1fr 1fr;
 	}
 
 	#contact {
@@ -252,9 +283,3 @@ footer i.fa-certificate {
 /***************************************************************************/
 /* =DESKTOP (1200px+)                                                      */
 /***************************************************************************/
-@media all and (min-width: 75rem) {
-	#content {
-		grid-template-columns: 1fr 1fr 1fr;
-		margin: 2rem auto;
-	}
-}

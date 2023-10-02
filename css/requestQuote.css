@@ -9,7 +9,7 @@ label {
     display: block;
     font-size: 1.4rem;
 }
-input[type=text], input[type=tel], textarea {
+input[type=text], input[type=tel], input[type=email], select, textarea {
     background: var(--clr-gray-400);
     border: none;
     border-radius: 4px;
@@ -18,4 +18,22 @@ input[type=text], input[type=tel], textarea {
 }
 textarea {
     min-width: 50rem;
+}
+#phoneNumberField, #emailField {
+    display: none;
+}
+
+/***************************************************************************/
+/* =TABLET (720px+)                                                        */
+/***************************************************************************/
+@media all and (min-width: 45rem) {
+    .t-flex {
+        display: flex;
+        gap: 2rem;
+        align-content: center;
+    }
+
+    .t-flex div.field {
+        margin-top: 0;
+    }
 }
