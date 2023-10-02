@@ -19,6 +19,8 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+
 
 		<!-- Process Includes -->
 		<script>
@@ -26,6 +28,18 @@
 				$("#header").load("includes/header.html"); 
 				$("#footer").load("includes/footer.html"); 
 			});
+		</script>
+
+		<!-- Show success message if quote has been requested -->
+		<script>
+			$(document).ready(() => {
+				const urlParams = new URLSearchParams(window.location.search);
+				const quoteRequested = urlParams.get('quoteRequested');
+
+				if (quoteRequested) {
+					$('#notices').append('<div class="quoteRequested">Quote successfully requested.  We will reach out to you soon.</div>')
+				}
+			})
 		</script>
 	</head>
 	<body>
@@ -35,10 +49,13 @@
 
 		<div id='navWrap'>
 			<nav>
-				<button class='requestQuote' type='button' onClick='document.location.href="requestQuote.html"' style='visibility: hidden'>Request a Quote</button>
+				<button class='requestQuote' type='button' onClick='document.location.href="requestQuote.html"'>Request a Quote</button>
 				<a class='selected' href='#'>Home</a>
 				<a href='#' style='visibility: hidden'>Contact</a>
 			</nav>
+		</div>
+
+		<div id='notices'>
 		</div>
 
 		<div id='content'>

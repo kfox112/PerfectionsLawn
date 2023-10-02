@@ -1,0 +1,31 @@
+#content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+.quoteRequested {
+	background: #EEFFEE;
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: 2rem;
+	padding: 2rem;
+	color: green;
+}
+
+.quoteRequested::before {
+	content: '\f058';
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	margin: 0 1rem;
+}
+
+/***************************************************************************/
+/* =TABLET (720px+)                                                        */
+/***************************************************************************/
+@media all and (min-width: 45rem) {
+	#content {
+		grid-template-columns: 1fr 1fr;
+	}
+}
